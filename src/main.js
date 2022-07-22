@@ -14,6 +14,8 @@ import router from './router'
 
 import '@/icons' // icon
 import '@/permission' // permission control
+import ElementsUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 /**
  * If you don't want to use mock-server
@@ -27,6 +29,8 @@ if (process.env.NODE_ENV === 'production') {
   const { mockXHR } = require('../mock')
   mockXHR()
 }
+
+Vue.use(ElementsUI)
 
 // set ElementUI lang to EN
 Vue.use(ElementUI, { locale })
